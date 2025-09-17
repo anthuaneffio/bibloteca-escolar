@@ -1,0 +1,332 @@
+/* === Estilos generales === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #f9f9f9;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* === Encabezado === */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #004080;
+    color: #fff;
+    padding: 15px 30px;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+header h1 {
+    font-size: 20px;
+}
+
+/* === Navegación === */
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav li {
+    list-style: none;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ffcc00;
+}
+
+/* === Botón Dark Mode === */
+#toggle-dark {
+
+    top: 20px;
+    right: 20px;
+    background: #000000;
+    border: none;
+    padding: 15px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* === Hero (sección principal) === */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    color: rgb(39, 4, 121);
+}
+
+.hero h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.hero .btn {
+    background: #ffcc00;
+    color: #222;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.hero .btn:hover {
+    background: #ffaa00;
+}
+
+/* === Noticias === */
+.noticias {
+    padding: 40px 20px;
+    background: #f0f0f0;
+}
+
+.noticias h2 {
+    margin-bottom: 20px;
+    color: #004080;
+}
+
+.noticias article {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-left: 4px solid #004080;
+    background: white;
+}
+
+/* === Galería === */
+.galeria {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.galeria h2 {
+    margin-bottom: 20px;
+    color: #004080;
+}
+
+.galeria .imagenes {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.galeria img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.galeria img:hover {
+    transform: scale(1.1);
+}
+
+/* === Footer === */
+footer {
+    background: #2975c1;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+/* === Dark Mode === */
+body.dark-mode {
+    background: #222;
+    color: #eee;
+}
+
+body.dark-mode header {
+    background: #111;
+}
+
+body.dark-mode nav a {
+    color: #eee;
+}
+
+body.dark-mode nav a:hover {
+    color: #ffcc00;
+}
+
+body.dark-mode .noticias {
+    background: #333;
+    
+}
+
+body.dark-mode .noticias article {
+    background: #444;
+    border-left-color: #ffcc00;
+}
+
+body.dark-mode footer {
+    background: #111;
+}
+body.dark-mode .hero {
+    color: #fff;
+}
+
+body.dark-mode .noticias h2{
+    color: #ffaa00;
+
+}
+
+   
+
+
+/* === Página Ver Libros === */
+main {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+main h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #004080;
+}
+
+/* 🔎 Buscador */
+.buscador {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.buscador input {
+    padding: 10px;
+    width: 60%;
+    border: 2px solid #004080;
+    border-radius: 6px 0 0 6px;
+    outline: none;
+    font-size: 16px;
+}
+
+.buscador span {
+    background: #004080;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 0 6px 6px 0;
+    cursor: pointer;
+}
+
+/* 📚 Tarjetas de libros */
+#contenedor-libros {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+
+}
+
+/* Estilos para cada tarjeta de libro */
+.libro {
+    background: #fff;
+    padding: 15px;
+    margin: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    width: 220px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* Imagen de portada */
+.libro img.portada {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+
+.libro:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.libro h2 {
+    font-size: 20px;
+    color: #004080;
+    margin-bottom: 10px;
+}
+
+.libro p {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.libro a {
+    display: inline-block;
+    padding: 8px 12px;
+    background: #ffcc00;
+    color: #222;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.libro a:hover {
+    background: #ffaa00;
+}
+
+/* Dark Mode para libros */
+body.dark-mode main h1 {
+    color: #ffcc00;
+}
+
+body.dark-mode .buscador input {
+    background: #333;
+    color: #eee;
+    border: 2px solid #ffcc00;
+}
+
+body.dark-mode .buscador span {
+    background: #ffcc00;
+    color: #222;
+}
+
+body.dark-mode .libro {
+    background: #333;
+    border-color: #555;
+}
+
+body.dark-mode .libro h2 {
+    color: #ffcc00;
+}
+
+body.dark-mode .libro p {
+    color: #ddd;
+}

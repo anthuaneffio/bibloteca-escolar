@@ -1,0 +1,175 @@
+/* ====== Fondo general ====== */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f6fa;
+  min-height: 100vh;
+}
+
+/* ====== HEADER institucional ====== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #004080;
+  color: #fff;
+  padding: 15px 38px;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+}
+
+header .logo img {
+  width: 46px;
+  margin-right: 10px;
+}
+
+header h1 {
+  font-size: 20px;
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  gap: 24px;
+}
+
+nav li {
+  list-style: none;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: #ffcc00;
+}
+
+/* ====== Main content areas ====== */
+.login-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 70px); /* Deja espacio para el header */
+  padding: 16px 0;
+  background: linear-gradient(135deg, #00628f, #80cbee);
+}
+
+.left-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 60px;
+}
+
+.logo-grande {
+  width: 270px;
+  margin-bottom: 15px;
+  box-shadow: 0 3px 18px rgba(0,0,0,0.07);
+  border-radius: 10px;
+}
+
+.nombre-colegio {
+  font-size: 1.18rem;
+  font-weight: bold;
+  color: #0a223d;
+  margin-top: 6px;
+  letter-spacing: 0.5px;
+}
+
+/* ====== Caja del login ====== */
+.right-area {
+  display: flex;
+  align-items: center;
+}
+
+.login-box {
+  background: #fff;
+  padding: 36px 30px 28px 30px;
+  border-radius: 15px;
+  width: 330px;
+  box-shadow: 0px 8px 24px rgba(0,0,0,0.13);
+  text-align: center;
+  min-width: 290px;
+}
+
+.login-box h2 {
+  margin-bottom: 22px;
+  color: #270479;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.login-box .emoji {
+  font-size: 1.18em;
+  vertical-align: middle;
+}
+
+/* ====== Inputs ====== */
+.login-box label {
+  display: block;
+  text-align: left;
+  margin-top: 12px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #222;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #bfc6d3;
+  border-radius: 8px;
+  outline: none;
+  background: #f9fafc;
+  font-size: 15px;
+  transition: 0.2s;
+}
+
+.login-box input:focus {
+  border-color: #1d976c;
+  box-shadow: 0 0 5px rgba(29,151,108,0.17);
+}
+
+/* ====== Botón ====== */
+.login-box button {
+  margin-top: 22px;
+  width: 100%;
+  padding: 13px;
+  background: #ffcc00;
+  border: none;
+  color: #1a237e;
+  font-size: 17px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.login-box button:hover {
+  background: #ffe066;
+  color: #003366;
+}
+
+/* ====== Responsive ====== */
+@media (max-width: 900px) {
+  .login-content {
+    flex-direction: column;
+    height: auto;
+    padding: 28px 0;
+  }
+  .left-area {
+    margin: 0 0 20px 0;
+  }
+  .right-area {
+    width: 100%;
+  }
+}
